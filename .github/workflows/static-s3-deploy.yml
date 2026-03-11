@@ -9,7 +9,6 @@ jobs:
     steps:
       - name: Checkout code from repository
         uses: actions/checkout@v4
-        run: echo "build"
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
