@@ -1,21 +1,8 @@
 name: Test
-on: workflow_dispatch
+on: push
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: build
         run: echo "build"
-  test:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: test
-        run: echo "test"
-  deploy:
-    runs-on: ubuntu-latest
-    needs: test
-    steps:
-      - name: deploy
-        run: echo "deploy"
-  
