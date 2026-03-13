@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodetsapp
+  labels:
+    app: nodetsapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nodetsapp
+  template:
+    metadata:
+      labels:
+        app: nodetsapp
+    spec:
+      containers:
+        - name: nodetsapp
+          image: ipxz3/nodetsapp:1.1
+          ports:
+            - containerPort: 3000
