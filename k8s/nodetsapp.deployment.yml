@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: nodetsapp
-          image: ipxz3/nodetsapp:1.1
+          image: ipxz3/nodetsapp:1.2
           ports:
             - containerPort: 3000
