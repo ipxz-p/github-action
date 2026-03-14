@@ -1,0 +1,15 @@
+name: k8s ci
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@4
+      - name: Build Docker image
+        run: "docker build -t ipxz3/nodetsapp:$GITHUB_SHA ."
